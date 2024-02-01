@@ -7,6 +7,8 @@ const Card = (props) => {
     let likedShows = props.likedShows;
     let setLikedShows = props.setLikedShows;
 
+    console.log("imgaes ",shows,shows?.image)
+
     function clickHandler() {
         //logic
         if(likedShows.includes(shows.id)) {
@@ -30,7 +32,7 @@ const Card = (props) => {
   return (
     <div className='w-[300px] bg-bgDark bg-opacity-80 rounded-md overflow-hidden'>
         <div className='relative'>
-            <img src={shows.image.url} alt='images'/>
+            <img src={shows?.image?.medium} alt='images'/>
 
             <div className='w-[40px] h-[40px] bg-white rounded-full absolute right-2 bottom-[-12px]
             grid place-items-center'>
